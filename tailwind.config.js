@@ -19,6 +19,9 @@ export default {
       fontFamily: {
         nunito: ['"Nunito Sans"', "sans-serif"],
       },
+      boxShadow: {
+        sm: "0 2px 9px 0 rgba(0, 0, 0, 0.05)",
+      },
     },
   },
   plugins: [],
