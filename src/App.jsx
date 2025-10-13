@@ -1,7 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
 
 import HomePage from "./pages/HomePage";
-import CountryDetailPage from "./pages/CountryDetailPage";
+import CountryDetailsPage from "./pages/CountryDetailsPage";
 
 import Error from "./ui/Error";
 import AppLayout from "./ui/AppLayout";
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
 
       {
         path: "/country/:countryName",
-        Component: CountryDetailPage,
+        Component: CountryDetailsPage,
       },
     ],
   },
