@@ -3,10 +3,10 @@ import Header from "./Header";
 
 function AppLayout() {
   return (
-    <div className="mx-auto max-w-[90rem] border border-red-500">
+    <div className="mx-auto max-w-[90rem]">
       <Header />
 
-      <main className="">
+      <main>
         <Outlet />
       </main>
     </div>
