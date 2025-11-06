@@ -2,10 +2,12 @@ import ThemeToggle from "./ThemeToggle";
 
 function Header() {
   return (
-    <header className="mb-6 flex h-16 items-center justify-between bg-white px-4 shadow-sm sm:mb-20 sm:px-10 dark:bg-blue-900">
-      <h1 className="font-extrabold sm:text-2xl">Where in the world?</h1>
+    <header className="mb-6 bg-white shadow-sm sm:mb-8 dark:bg-blue-900">
+      <div className="mx-auto flex h-16 max-w-[90rem] items-center justify-between px-4 sm:px-10">
+        <h1 className="font-extrabold sm:text-2xl">Where in the world?</h1>
 
-      <ThemeToggle />
+        <ThemeToggle />
+      </div>
     </header>
   );
 }
