@@ -12,7 +12,7 @@ function SearchBar() {
         type="text"
         id="search"
         placeholder="Search for a country…"
-        className="w-full cursor-pointer bg-transparent outline-0 dark:placeholder:text-white"
+        className="w-full cursor-pointer bg-transparent text-xs outline-0 placeholder:text-[#C4C4C4] sm:text-sm dark:placeholder:text-white"
         required
       />
     </form>
