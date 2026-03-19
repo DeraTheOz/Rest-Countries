@@ -11,6 +11,7 @@ export async function getCountries() {
     const data = await res.json();
     return data;
   } catch (error) {
-    console.error(error.message);
+    console.error("API", error.message);
+    throw error; // Re-throw so loader can handle it
   }
 }
