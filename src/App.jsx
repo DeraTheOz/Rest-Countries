@@ -4,14 +4,13 @@ import { RouterProvider } from "react-router/dom";
 import HomePage, { loader } from "./pages/HomePage";
 import CountryDetailsPage from "./pages/CountryDetailsPage";
 
-import Error from "./ui/Error";
 import AppLayout from "./ui/AppLayout";
-import Loader from "./ui/Loader";
+import PageNotFound from "./ui/PageNotFound";
 
 const router = createBrowserRouter([
   {
     Component: AppLayout,
-    errorElement: <Error />,
+    errorElement: <PageNotFound />,
 
     children: [
       {
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} hydrateFallback={<Loader />} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
