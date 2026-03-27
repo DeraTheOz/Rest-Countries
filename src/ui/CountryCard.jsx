@@ -1,5 +1,8 @@
 import { memo } from "react";
+import { Link } from "react-router";
+
 import { formatNumber } from "../utils/formatNumber";
+import { getCountryPath } from "../features/countries/countryDetailsUtils";
 
 function CountryCard({ country }) {
   const population =
@@ -8,18 +11,22 @@ function CountryCard({ country }) {
       : formatNumber(country.population);
 
   const capital =
-    country.capital.length === 0 || country.capital === ""
+    !Array.isArray(country.capital) || country.capital.length === 0
       ? "No capital"
-      : country.capital;
+      : country.capital.join(", ");
 
   return (
-    <div className="flex w-[16.5rem] flex-col justify-between overflow-clip rounded-[0.3125rem] bg-white shadow-md sm:w-full dark:bg-blue-900">
+    <Link
+      to={getCountryPath(country.name.common)}
+      aria-label={`View details for ${country.name.common}`}
+      className="flex w-[16.5rem] cursor-pointer flex-col justify-between overflow-clip rounded-[0.3125rem] bg-white shadow-md sm:w-full dark:bg-blue-900"
+    >
       <img
         src={country.flags.svg}
         alt={country.flags.alt || `${country.name.common} flag`}
       />
 
-      <div className="my-8 px-6">
+      <div className="px-6 my-8">
         <h3 className="mb-4 text-lg font-extrabold">{country.name.common}</h3>
 
         <ul className="space-y-2 [&_li]:font-light [&_span]:text-sm [&_span]:font-semibold">
@@ -34,7 +41,7 @@ function CountryCard({ country }) {
           </li>
         </ul>
       </div>
-    </div>
+    </Link>
   );
 }
 
