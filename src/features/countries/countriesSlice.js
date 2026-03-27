@@ -10,6 +10,7 @@ import {
 const initialState = {
   countries: [],
   filteredCountries: [],
+  currentCountry: null,
   status: "idle",
   error: null,
   region: "All",
@@ -33,6 +34,14 @@ const countriesSlice = createSlice({
     setCountries(state, action) {
       state.countries = action.payload;
       applyFilters(state);
+    },
+
+    setCountryDetails(state, action) {
+      state.currentCountry = action.payload ?? null;
+    },
+
+    clearCountryDetails(state) {
+      state.currentCountry = null;
     },
 
     setSearch(state, action) {
@@ -78,6 +87,8 @@ const countriesSlice = createSlice({
 
 export const {
   setCountries,
+  setCountryDetails,
+  clearCountryDetails,
   setStatus,
   setSearch,
   setRegion,
