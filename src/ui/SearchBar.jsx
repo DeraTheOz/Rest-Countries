@@ -33,7 +33,7 @@ function SearchBar() {
       startTransition(() => {
         setSearchParams(nextParams, { replace: true });
       });
-    }, 300);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [currentSearch, inputValue, searchParams, setSearchParams]);
