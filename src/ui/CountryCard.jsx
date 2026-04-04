@@ -19,14 +19,15 @@ function CountryCard({ country }) {
     <Link
       to={getCountryPath(country.name.common)}
       aria-label={`View details for ${country.name.common}`}
-      className="flex w-[16.5rem] cursor-pointer flex-col justify-between overflow-clip rounded-[0.3125rem] bg-white shadow-md sm:w-full dark:bg-blue-900"
+      className="flex max-w-[18.5rem] flex-grow basis-[16.5rem] flex-col justify-between overflow-clip rounded-[0.3125rem] bg-white shadow-md dark:bg-blue-900"
     >
       <img
         src={country.flags.svg}
         alt={country.flags.alt || `${country.name.common} flag`}
+        className="aspect-[3/2] h-full w-full object-cover"
       />
 
-      <div className="px-6 my-8">
+      <div className="my-8 px-6">
         <h3 className="mb-4 text-lg font-extrabold">{country.name.common}</h3>
 
         <ul className="space-y-2 [&_li]:font-light [&_span]:text-sm [&_span]:font-semibold">

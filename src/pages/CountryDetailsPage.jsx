@@ -182,15 +182,16 @@ function CountryDetailsPage() {
         Back
       </Button>
 
-      <div className="grid grid-cols-1 mt-16 xl:grid-cols-2 xl:items-center xl:gap-16">
-        <div className="rounded-lg overflow-clip">
+      <div className="mt-16 grid grid-cols-1 xl:grid-cols-2 xl:items-center xl:gap-16">
+        <div className="overflow-clip rounded-lg">
           <img
             src={displayedCountry.flags.svg}
             alt={displayedCountry.flags.alt || `${countryName} flag`}
+            className="rounded-lg"
           />
         </div>
 
-        <div className="flex flex-col mt-12 mb-4 xl:m-0">
+        <div className="mb-4 mt-12 flex flex-col xl:m-0">
           <h2 className="mb-8 text-[1.375rem] font-extrabold lg:text-[2rem]">
             {countryName}
           </h2>
@@ -227,7 +228,7 @@ function CountryDetailsPage() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-4 mt-8 xs:flex-row xs:items-start xl:mt-16">
+          <div className="mt-8 flex flex-col gap-4 xs:flex-row xs:items-start xl:mt-16">
             <p className="font-semibold">Border Countries:</p>
 
             {borderCountries.length > 0 ? (
