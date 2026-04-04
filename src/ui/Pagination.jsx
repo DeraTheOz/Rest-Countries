@@ -20,6 +20,10 @@ function Pagination() {
     }
 
     setSearchParams(nextParams);
+
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   return (
