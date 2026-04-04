@@ -19,9 +19,6 @@ export default {
       fontFamily: {
         nunito: ['"Nunito Sans"', "sans-serif"],
       },
-      gridTemplateColumns: {
-        custom: "repeat(auto-fit, minmax(16.5rem, 1fr))",
-      },
       boxShadow: {
         sm: "0 2px 9px 0 rgba(0, 0, 0, 0.05)",
         md: "0 0 7px 2px rgba(0, 0, 0, 0.03)",
