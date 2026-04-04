@@ -268,12 +268,12 @@ function HomePage() {
         />
       ) : (
         <>
-          <section className="mx-auto mb-8 flex max-w-[90rem] flex-col justify-between gap-8 sm:flex-row">
+          <section className="mb-8 flex flex-col justify-between gap-8 sm:flex-row">
             <SearchBar />
             <Filter />
           </section>
 
-          <section className="mx-auto grid max-w-[90rem] grid-cols-custom justify-center justify-items-center gap-8 sm:justify-items-start">
+          <section className="flex flex-wrap justify-center gap-16">
             {paginatedCountries.map((country) => (
               <CountryCard country={country} key={country.name.common} />
             ))}
